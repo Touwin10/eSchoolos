@@ -1,0 +1,263 @@
+
+<!--
+  ~ Copyright (c) 2020 Touwin10
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+  associated documentation files (the "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+  following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all copies or substantial
+  portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+  NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Students Management Web Application">
+    <meta name="author" content="Edx Fortune">
+    <link rel="icon" href="favicon.ico">
+    <title>eSchoolos</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/material.min.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+<body>
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">How To</a>
+            <a class="nav-item nav-link" href="#">Blog</a>
+            <a class="nav-item nav-link" href="#">Contact Us</a>
+            <a class="nav-item nav-link border" href="/eschoolos/dashboard/reports">Dashboard</a>
+        </div>
+    </div>
+</nav>
+<!-- Header -->
+<section class="header bg-primary w-100 py-2"
+         style="min-height: 50%; background-image: url('../../../static/img/bg-1.jpg'); background-position: center;">
+    <div class="w-100 h-100 text-center">
+        <div class="w-100 py-5">
+            <h1>eSchoolos</h1>
+        </div>
+        <div class="w-50 m-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+        </div>
+        <div class="my-5">
+            <button class="btn btn-outline-dark text-white">Get Started</button>
+        </div>
+    </div>
+</section>
+
+<!--Features-->
+<section class="features py-5">
+    <h2 class="text-center pb-5">Features</h2>
+
+    <div class="d-flex flex-wrap justify-content-center justify-items-center">
+        <!--        -->
+        <div class="card border-0 text-center m-2">
+            <div class="card-body">
+                <h5 class="card-title text-muted">
+                    <span class="mdi mdi-trending-up"></span>
+                </h5>
+                <p class="card-text">
+                    Tellus integer feugiat scelerisque varius morbi enim nunc faucibus. Non sodales neque sodales ut.
+                </p>
+            </div>
+        </div>
+        <!--        -->
+        <div class="card border-0 text-center m-2">
+            <div class="card-body">
+                <h5 class="card-title text-muted">
+                    <span class="mdi mdi-image-filter-drama"></span>
+                </h5>
+                <p class="card-text">
+                    Tellus integer feugiat scelerisque varius morbi enim nunc faucibus. Non sodales neque sodales ut.
+                </p>
+            </div>
+        </div>
+        <!--        -->
+        <div class="card border-0 text-center m-2">
+            <div class="card-body">
+                <h5 class="card-title text-muted">
+                    <span class="mdi mdi-cogs"></span>
+                </h5>
+                <p class="card-text">
+                    Tellus integer feugiat scelerisque varius morbi enim nunc faucibus. Non sodales neque sodales ut.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--How To-->
+<section class="howTo py-5 bg-light">
+
+    <h2 class="text-center pb-5">How To Help You</h2>
+
+    <div class="row content no-gutters justify-content-center">
+        <div class="left col-md-7">
+            <div class="mx-5">
+                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
+                <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu
+                    fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit
+                    anim id est laborum.
+                </p>
+
+                <button class="btn btn-outline-primary">Read more</button>
+
+            </div>
+        </div>
+        <div class="right col-md-5">
+            <img th:src="@{/img/bg-2.jpg}" class="img-fluid rounded">
+        </div>
+    </div>
+
+</section>
+
+<!--Blog-->
+<section class="blog py-5" style="min-height: 50%">
+    <h2 class="text-center pb-5">Our Blogs</h2>
+
+    <div class="d-flex flex-wrap justify-content-center justify-items-center">
+        <div class="card">
+            <img class="card-img-top" th:src="@{/img/bg-5.jfif}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a class="btn btn-outline-primary">Read more</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" th:src="@{/img/bg-5.jfif}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a class="btn btn-outline-primary">Read more</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" th:src="@{/img/bg-5.jfif}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a class="btn btn-outline-primary">Read more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Contact Us-->
+<section class="contact py-5 bg-light" style="min-height: 50%">
+    <h2 class="text-center pb-5">Contact Us</h2>
+
+    <form class="form">
+        <div class="row no-gutters m-2">
+            <div class="col-md-6 p-1">
+                <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="col-md-6 p-1">
+                <input type="text" class="form-control" placeholder="Your Email">
+            </div>
+
+            <div class="col-md-12 mt-4">
+                <textarea class="form-control" rows="12" placeholder="Your Message"></textarea>
+            </div>
+        </div>
+    </form>
+
+</section>
+
+<footer class="footer bg-primary py-4" style="min-height: 50px">
+
+    <div class="container-center py-2">
+
+        <div class="my-3">
+            <h2 class="text-light font-weight-normal mb-3">
+                Contact us
+            </h2>
+            <ul class="d-flex" style="list-style: none">
+                <li class="mx-2">
+                    <span class="mdi mdi-phone"></span> +1 879 604 8055
+                </li>
+                <li class="px-2 border-left border-white">
+                    <span class="mdi mdi-email-outline"></span> example@mail.com
+                </li>
+            </ul>
+
+        </div>
+
+
+        <hr>
+
+        <div class="text-right">
+            <span class="text-white">© 2019 Copyright</span>
+        </div>
+    </div>
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

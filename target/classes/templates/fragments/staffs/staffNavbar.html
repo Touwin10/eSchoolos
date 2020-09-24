@@ -1,0 +1,33 @@
+<nav xmlns:th="http://www.thymeleaf.org" th:fragment="staffNavbar"
+     class="breadcrumb m-0 p-0 pl-3 bg-light d-flex align-items-center w-100 sticky-top" style="margin-top: .10rem !important;">
+
+
+    <ol class="breadcrumb m-0 p-0">
+        <li class="breadcrumb-item"><a href="/eschoolos/dashboard/reports">Home</a></li>
+        <li class="breadcrumb-item" >
+            <a href="/dashboard/staff/list">Staff</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            <a th:href="${href}" th:text="${title}"></a>
+        </li>
+    </ol>
+
+    <div class="m-auto"></div>
+
+    <div class="dropdown dropleft mr-4">
+                            <span class="pointer" data-toggle="dropdown" id="dropdownMenuButton" style="cursor: pointer">
+                                <span class="material-icons">more_vert</span>
+                            </span>
+        <div aria-labelledby="dropdownMenuButton" class="dropdown-menu menu">
+            <a class="dropdown-item pointer" href="/dashboard/staff/list">
+                All Staffs
+            </a>
+            <a class="dropdown-item pointer" href="/eschoolos/dashboard/staff/new">
+                Add Staff
+            </a>
+
+        </div>
+    </div>
+
+
+</nav>

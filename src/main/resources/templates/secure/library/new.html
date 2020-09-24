@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="fragments/adminLayout" xmlns:layout="http://www.thymeleaf.org/"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div layout:fragment="content">
+    <nav th:replace="fragments/library/libraryNavbar :: libraryNavbar(title='Add Asset', editable=false)"></nav>
+    <div th:replace="fragments/library/assetForm :: assetForm(action='/eschoolos/dashboard/library/new', asset=asset)"></div>
+</div>
+</body>
+</html>

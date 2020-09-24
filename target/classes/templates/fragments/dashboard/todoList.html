@@ -1,0 +1,65 @@
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="todoList">
+    <div class="card todoList">
+        <div class="card-body">
+            <div class="card-title border-bottom">Todo List</div>
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    Add fees details in system
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                <label class="form-check-label" for="defaultCheck2">
+                    Announcement for holiday
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                <label class="form-check-label" for="defaultCheck3">
+                    Call bus driver
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                <label class="form-check-label" for="defaultCheck4">
+                    School picnic
+                </label>
+            </div>
+
+            <div class="form-check border-0">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                <label class="form-check-label" for="defaultCheck5">
+                    Exam time table generate
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .todoList  .form-check{
+            border-bottom: 1px solid whitesmoke;
+            padding: 10px 35px;
+        }
+        .todoList  .form-check label{
+            font-size: 16px;
+        }
+    </style>
+
+    <script th:inline="javascript">
+        $("input[type='checkbox']").change(function() {
+            if($(this).is(":checked")){
+                $(this).next("label").css("text-decoration", "line-through");
+            }else{
+                $(this).next("label").css("text-decoration", "none");
+            }
+        });
+    </script>
+
+</div>

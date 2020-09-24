@@ -1,0 +1,213 @@
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="professorForm">
+
+    <form class="form mt-2 pb-5 container-center" method="post" th:action="${action}" th:object="${professor}">
+
+        <h3 class="my-3">
+            <span th:if="!${editable}">Add</span>
+            <span th:if="${editable}">Edit</span>
+            Professor
+        </h3>
+
+        <h5 class="bg-light p-2">Basic Information</h5>
+        <fieldset>
+            <input type="hidden" name="professorId" th:field="*{professorId}"/>
+            <div class="row">
+                <!--Professor Number-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="professorNumber">Professor Number</label>
+                        <input id="professorNumber" name="professorNumber" type="text" class="form-control"
+                               th:field="*{professorNumber}">
+                        <span th:if="${#fields.hasErrors('professorNumber')}" th:errors="*{professorNumber}"
+                              th:text="${#fields.errors('professorNumber')}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+                <!--First Name-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input id="firstName" name="firstName" type="text" class="form-control"
+                               th:field="*{firstName}">
+                        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <!--Last Name-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input id="lastName" name="lastName" type="text" class="form-control"
+                               th:field="*{lastName}">
+                        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <!--Middle Name-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="middleName">Middle name</label>
+                        <input id="middleName" name="middleName" type="text" class="form-control"
+                               th:field="*{middleName}">
+                    </div>
+                </div>
+
+                <!--Gender-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" class="form-control"
+                                th:field="*{gender}">
+                            <option th:value="M">Male</option>
+                            <option th:value="F">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="birthdate">Birth Date</label>
+                        <input id="birthdate" name="birthDate" type="date" class="form-control"
+                               th:field="*{birthDate}">
+                        <span th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="joiningDate">Joining Date</label>
+                        <input id="joiningDate" name="joiningDate" type="date" class="form-control"
+                               th:field="*{joiningDate}">
+                        <span th:if="${#fields.hasErrors('joiningDate')}" th:errors="*{joiningDate}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <input id="designation" name="designation" type="text" class="form-control"
+                               th:field="*{designation}">
+                    </div>
+                </div>
+
+                <!--                <div class="col-md-6">-->
+                <!--                    <div class="form-group">-->
+                <!--                        <label for="department">Department</label>-->
+                <!--                        <input id="department" name="department" type="text" class="form-control">-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+
+            </div>
+        </fieldset>
+
+
+        <h5 class="bg-light p-2">Security</h5>
+        <fieldset>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" class="form-control"
+                               th:field="*{password}">
+                        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input id="confirmPassword" name="confirmPassword" type="password" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <h5 class="bg-light p-2">Contact</h5>
+        <fieldset>
+            <div class="row">
+                <!--Email-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="text" class="form-control"
+                               th:field="*{email}">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="officeNumber">Office Number</label>
+                        <input id="officeNumber" name="officeNumber" type="text" class="form-control"
+                               th:field="*{officeNumber}">
+                    </div>
+                </div>
+
+                <!--mobilenumber-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="mobilenumber">Mobile Number</label>
+                        <input id="mobilenumber" name="mobilenumber" type="text" class="form-control"
+                               th:field="*{mobileNumber}">
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+
+        <h5 class="bg-light p-2">Address</h5>
+        <fieldset>
+            <div class="row">
+                <!--street-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="street">Street</label>
+                        <input id="street" name="street" type="text" class="form-control"
+                               th:field="*{address.street}">
+                    </div>
+                </div>
+                <!--city-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input id="city" name="city" type="text" class="form-control"
+                               th:field="*{address.city}">
+                    </div>
+                </div>
+                <!--state-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input id="state" name="state" type="text" class="form-control"
+                               th:field="*{address.state}">
+                    </div>
+                </div>
+                <!--zipcode-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="zipcode">Zip Code</label>
+                        <input id="zipcode" name="zipcode" type="text" class="form-control"
+                               th:field="*{address.zipCode}">
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+
+        <div style="float:right;">
+            <a href="/eschoolos/dashboard/professor/list" class="btn btn-outline-dark">Cancel</a>&nbsp;&nbsp;&nbsp;
+            <button id="btnSubmit" type="submit" class="btn btn-outline-success">
+                <span th:if="!${editable}">Save</span>
+                <span th:if="${editable}">Update</span>
+                Professor
+            </button>
+        </div>
+
+    </form>
+
+
+</div>

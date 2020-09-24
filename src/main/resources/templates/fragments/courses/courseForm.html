@@ -1,0 +1,122 @@
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="courseForm">
+
+    <form class="form mt-2 pb-5 container-center" method="post" th:action="${action}" th:object="${course}">
+
+        <h3 class="my-3">
+            <span th:if="!${editable}">Add</span>
+            <span th:if="${editable}">Edit</span>
+            Course
+        </h3>
+
+
+        <h5 class="bg-light p-2">Course Details</h5>
+        <fieldset>
+            <input type="hidden" name="studentId" th:field="*{courseId}"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Course Name</label>
+                        <input id="name" name="name" type="text" class="form-control"
+                               th:field="*{name}">
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="courseCode">Course Code</label>
+                        <input id="courseCode" name="courseCode" type="text" class="form-control"
+                               th:field="*{courseCode}">
+                        <span th:if="${#fields.hasErrors('courseCode')}" th:errors="*{courseCode}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="details">Course Details</label>
+                        <textarea id="details" name="details" type="text" class="form-control"
+                               th:field="*{details}" rows="4"></textarea>
+                        <span th:if="${#fields.hasErrors('details')}" th:errors="*{details}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="startFrom">Start From</label>
+                        <input id="startFrom" name="startFrom" type="date" class="form-control"
+                               th:field="*{startFrom}">
+                        <span th:if="${#fields.hasErrors('startFrom')}" th:errors="*{startFrom}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="timeLength">Course Time Length</label>
+                        <input id="timeLength" name="timeLength" type="number" class="form-control"
+                               th:field="*{timeLength}">
+                        <span th:if="${#fields.hasErrors('timeLength')}" th:errors="*{timeLength}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="price">Course Price</label>
+                        <input id="price" name="price" type="number" class="form-control"
+                               th:field="*{price}">
+                        <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="professorName">Professor Name</label>
+                        <input id="professorName" name="professorName" type="text" class="form-control"
+                               th:field="*{professorName}">
+                        <span th:if="${#fields.hasErrors('professorName')}" th:errors="*{professorName}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="maxStudents">Maximum Students</label>
+                        <input id="maxStudents" name="maxStudents" type="number" class="form-control"
+                               th:field="*{maxStudents}">
+                        <span th:if="${#fields.hasErrors('maxStudents')}" th:errors="*{maxStudents}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number</label>
+                        <input id="contactNumber" name="contactNumber" type="number" class="form-control"
+                               th:field="*{contactNumber}">
+                        <span th:if="${#fields.hasErrors('contactNumber')}" th:errors="*{contactNumber}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+
+
+        <div style="float:right;">
+            <a href="/eschoolos/dashboard/course/list" class="btn btn-outline-dark">Cancel</a>&nbsp;&nbsp;&nbsp;
+            <button id="btnSubmit" type="submit" class="btn btn-outline-success">
+                <span th:if="!${editable}">Save</span>
+                <span th:if="${editable}">Update</span>
+                Course
+            </button>
+        </div>
+
+    </form>
+
+
+</div>

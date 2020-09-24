@@ -1,0 +1,61 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.bg-primary {
+    background-color: #042954 !important;
+    color: white;
+}
+
+section.features .card {
+    width: 300px;
+}
+
+section.features .card .mdi {
+    font-size: 5em;
+}
+
+section.howTo .content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section.howTo .content .left {
+    /*width: auto;*/
+}
+
+section.howTo .content .right {
+    /*width: 30%;*/
+}
+
+section.blog .card {
+    width: 20rem;
+    margin: 20px;
+}
+
+section.contact .form {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-center{
+    max-width: 900px;
+    margin: auto;
+}
+
+@media (max-width: 950px) {
+    section.howTo .content .left {
+        order: 2;
+        width: auto;
+    }
+
+    section.howTo .content .right {
+        width: 100%;
+        order: 1;
+        text-align: center;
+        margin: 20px 20px;
+    }
+}

@@ -1,0 +1,123 @@
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="assetForm">
+
+    <form class="form mt-2 pb-5 container-center" method="post" th:action="${action}" th:object="${asset}">
+
+        <h3 class="my-3">
+            <span th:if="!${editable}">Add</span>
+            <span th:if="${editable}">Edit</span>
+            Asset
+        </h3>
+
+
+        <h5 class="bg-light p-2">Asset Details</h5>
+        <fieldset>
+            <input type="hidden" name="studentId" th:field="*{assetId}"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input id="title" name="title" type="text" class="form-control"
+                               th:field="*{title}">
+                        <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" class="form-control"
+                               th:field="*{subject}">
+                        <span th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="authorName">Author Name</label>
+                        <input id="authorName" name="authorName" type="text" class="form-control"
+                               th:field="*{authorName}">
+                        <span th:if="${#fields.hasErrors('authorName')}" th:errors="*{authorName}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="publisher">Publisher</label>
+                        <input id="publisher" name="publisher" type="text" class="form-control"
+                               th:field="*{publisher}">
+                        <span th:if="${#fields.hasErrors('publisher')}" th:errors="*{publisher}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <input id="department" name="department" type="text" class="form-control"
+                               th:field="*{department}">
+                        <span th:if="${#fields.hasErrors('department')}" th:errors="*{department}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="type">Asset Type</label>
+                        <input id="type" name="type" type="text" class="form-control"
+                               th:field="*{type}">
+                        <span th:if="${#fields.hasErrors('type')}" th:errors="*{type}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="purchaseDate">Purchase Date</label>
+                        <input id="purchaseDate" name="purchaseDate" type="date" class="form-control"
+                               th:field="*{purchaseDate}">
+                        <span th:if="${#fields.hasErrors('purchaseDate')}" th:errors="*{purchaseDate}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input id="price" name="price" type="number" class="form-control"
+                               th:field="*{price}">
+                        <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <input id="status" name="status" type="text" class="form-control"
+                               th:field="*{status}">
+                        <span th:if="${#fields.hasErrors('status')}" th:errors="*{status}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+
+
+        <div style="float:right;">
+            <a href="/eschoolos/dashboard/library/list" class="btn btn-outline-dark">Cancel</a>&nbsp;&nbsp;&nbsp;
+            <button id="btnSubmit" type="submit" class="btn btn-outline-success">
+                <span th:if="!${editable}">Save</span>
+                <span th:if="${editable}">Update</span>
+                Asset
+            </button>
+        </div>
+
+    </form>
+
+
+</div>

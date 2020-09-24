@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="fragments/adminLayout" xmlns:layout="http://www.thymeleaf.org/"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div layout:fragment="content">
+    <nav th:replace="fragments/students/studentNavbar :: studentNavbar(title='Student Profile', href='/eschoolos/dashboard/student/profile')"></nav>
+
+    <div class="container-center p-5" style="max-width: 1100px">
+        <h3 class="my-3">Student Profile</h3>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="info-1 mb-2 card shadow-1">
+                    <img alt="Card image cap" class="img-fluid" src="https://placeimg.com/300/200/people/sepia">
+                    <div class="card-body">
+                        <div class="card-title">Full name</div>
+                    </div>
+                    <ul class="list-group list-group-flush px-3">
+                        <li class="list-group-item d-flex align-items-center text-black">
+                            <span class="mr-auto">Followers</span>
+                            <span>1,200</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center text-black">
+                            <span class="mr-auto">Following</span>
+                            <span>750</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center text-black">
+                            <span class="mr-auto">Friends</span>
+                            <span>11,172</span>
+                        </li>
+                    </ul>
+
+                    <div class="card-actions">
+                        <a class="btn btn-outline-primary" href="#">Follow</a>
+                        <a class="btn btn-outline-primary" href="#">Message</a>
+                    </div>
+                </div>
+
+                <div class="info-2 card mb-2 shadow-1">
+                    <div class="card-body">
+                        <div class="card-title">About Me</div>
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                    </div>
+
+                    <ul class="list-group list-group-flush px-3">
+                        <li class="list-group-item d-flex align-items-center text-black">
+                            <span class="mr-auto">Gender</span>
+                            <span>Female</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center text-black">
+                            <span class="mr-auto">Department</span>
+                            <span>Mechanical</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center text-black">
+                            <span class="mr-auto">Email</span>
+                            <span>test@example.com</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center text-black">
+                            <span class="mr-auto">Phone</span>
+                            <span>1234567890</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-2 card shadow-1">
+                    <div class="card-body">
+                        <div class="card-title">Interest In</div>
+                    </div>
+
+                    <ul class="list-group list-group-flush px-3">
+                        <li class="list-group-item text-black py-2">
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Study</div>
+                            </div>
+
+                        </li>
+
+                        <li class="list-group-item text-black py-2">
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Cricket</div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item text-black py-2">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 20%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Music</div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-8">
+
+                <ul class="nav nav-justified nav-tabs" id="justifiedTab" role="tablist">
+                    <li class="nav-item">
+                        <a aria-controls="home" aria-selected="true" class="nav-link active" data-toggle="tab" href="#about" id="about-tab" role="tab">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-controls="profile" aria-selected="false" class="nav-link" data-toggle="tab" href="#activity" id="activity-tab" role="tab">Activity</a>
+                    </li>
+                </ul>
+
+
+                <div class="tab-content" id="justifiedTabContent">
+                    <!-- About -->
+                    <div aria-labelledby="about-tab" class="tab-pane fade show active" id="about" role="tabpanel">
+                        <div class="row m-0 my-3 pb-3 border-bottom">
+                            <div class="col">
+                                <h5>Full Name</h5>
+                                <span class="text-muted">Sarah Smith</span>
+                            </div>
+                            <div class="col">
+                                <h5>Mobile</h5>
+                                <span class="text-muted">(123) 456 7890</span>
+                            </div>
+                            <div class="col">
+                                <h5>Email</h5>
+                                <span class="text-muted">test@example.com</span>
+                            </div>
+                            <div class="col">
+                                <h5>Location</h5>
+                                <span class="text-muted">India</span>
+                            </div>
+                        </div>
+
+                        <div class="my-3 pb-3">
+                             <p>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                             </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+
+                        <div class="my-3">
+                            <h5 class="bg-light p-2">Education</h5>
+                            <ul class="mb-5">
+                                <li>Schooling at sarvoday vidhyalay, Mumbai</li>
+                                <li>Betchler In Arts in Bhagvati College Hariyana</li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="my-3">
+                            <h5 class="bg-light p-2">Certificates</h5>
+                            <ul class="mb-5">
+                                <li>1st Prise in Music competition</li>
+                                <li>1st Prise in Acting & Drama</li>
+                                <li>Gold Medal in Betchler in Arts</li>
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                    <!-- Activity -->
+                    <div aria-labelledby="activity-tab" class="tab-pane fade" id="activity" role="tabpanel">
+                        <div class="row py-3">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control"  rows="3" placeholder="What's in your mind today?"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <button class="btn btn-outline-dark min-w-auto">
+                                        <span class="mdi mdi-account"></span>
+                                    </button>
+                                    <button class="btn btn-outline-dark min-w-auto">
+                                        <span class="mdi mdi-camera"></span>
+                                    </button>
+                                    <button class="btn btn-outline-dark min-w-auto">
+                                        <span class="mdi mdi-near-me"></span>
+                                    </button>
+                                    <button class="btn btn-outline-dark min-w-auto">
+                                        <span class="mdi mdi-sticker-emoji"></span>
+                                    </button>
+                                    <button class="btn btn-dark ml-auto">
+                                        POST
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

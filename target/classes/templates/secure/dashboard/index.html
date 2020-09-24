@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="fragments/adminLayout" xmlns:layout="http://www.thymeleaf.org/"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div class="py-5" layout:fragment="content">
+
+    <div class="row m-auto" style="max-width: 95%">
+        <div class="py-1 col-sm-12 col-md-6 col-lg-3">
+            <div th:replace="fragments/dashboard/cardCounter :: cardCounter(number=550, title='Students', icon='mdi-account-multiple', color='#042954')"></div>
+        </div>
+        <div class="py-1 col-sm-12 col-md-6 col-lg-3">
+            <div th:replace="fragments/dashboard/cardCounter :: cardCounter(number=120, title='Professors', icon='mdi-account-multiple-outline', color='#616161')"></div>
+        </div>
+        <div class="py-1 col-sm-12 col-md-6 col-lg-3">
+            <div th:replace="fragments/dashboard/cardCounter :: cardCounter(number=60, title='Courses', icon='mdi-school', color='#CC4F64')"></div>
+        </div>
+        <div class="py-1 col-sm-12 col-md-6 col-lg-3">
+            <div th:replace="fragments/dashboard/cardCounter :: cardCounter(number=75, title='Staff', icon='mdi-face', color='#2EAE95')"></div>
+        </div>
+
+    </div>
+
+
+    <div class="m-auto" style="max-width: 95%">
+
+        <hr>
+
+        <!--        -->
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="my-1 card">
+                    <div class="card-body">
+                        <h4 class="card-title">University Survey</h4>
+                        <canvas id="chart1"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="my-1 card">
+                    <div class="card-body">
+                        <h4 class="card-title">University Survey</h4>
+                        <canvas id="chart2"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--        -->
+        <div class="row mt-4">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div th:replace="fragments/courses/courseItem :: courseItem"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div th:replace="fragments/courses/courseItem :: courseItem"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div th:replace="fragments/courses/courseItem :: courseItem"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div th:replace="fragments/courses/courseItem :: courseItem"></div>
+            </div>
+        </div>
+
+
+        <!--        -->
+        <div class="row mt-4">
+            <div class="col">
+                <div th:replace="fragments/dashboard/todoList :: todoList"></div>
+            </div>
+            <div class="col">
+                <div th:replace="fragments/dashboard/activityFeed :: activityFeed"></div>
+            </div>
+        </div>
+
+        <!--        -->
+        <div class="row mt-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">New Student List</div>
+                        <table class="table mb-0">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Date Of Admit</th>
+                                <th scope="col">Fees</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>17/05/2017</td>
+                                <td>
+                                    <span class="badge badge-success">PAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>17/05/2017</td>
+                                <td>
+                                    <span class="badge badge-danger">UNPAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>17/05/2017</td>
+                                <td>
+                                    <span class="badge badge-danger">UNPAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Tina</td>
+                                <td>J. leon</td>
+                                <td>@twitter</td>
+                                <td>12/04/2014</td>
+                                <td>
+                                    <span class="badge badge-success">PAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Petey</td>
+                                <td>Cruiser</td>
+                                <td>@twitter</td>
+                                <td>11/01/2016</td>
+                                <td>
+                                    <span class="badge badge-success">PAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Anna</td>
+                                <td>Pull</td>
+                                <td>@mdo</td>
+                                <td>17/05/2017</td>
+                                <td>
+                                    <span class="badge badge-success">PAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Paul</td>
+                                <td>Molive</td>
+                                <td>@fat</td>
+                                <td>10/02/2015</td>
+                                <td>
+                                    <span class="badge badge-success">PAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Maya</td>
+                                <td>Didas</td>
+                                <td>@twitter</td>
+                                <td>17/07/2016</td>
+                                <td>
+                                    <span class="badge badge-danger">UNPAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>Ira</td>
+                                <td>Membrit</td>
+                                <td>@twitter</td>
+                                <td>22/01/2018</td>
+                                <td>
+                                    <span class="badge badge-success">PAID</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td>Brock</td>
+                                <td>Lee</td>
+                                <td>@twitter</td>
+                                <td>17/08/2017</td>
+                                <td>
+                                    <span class="badge badge-success">PAID</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

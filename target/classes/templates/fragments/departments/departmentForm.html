@@ -1,0 +1,85 @@
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="departmentForm">
+
+    <form class="form mt-2 pb-5 container-center" method="post" th:action="${action}" th:object="${department}">
+
+        <h3 class="my-3">
+            <span th:if="!${editable}">Add</span>
+            <span th:if="${editable}">Edit</span>
+            Department
+        </h3>
+
+
+        <h5 class="bg-light p-2">Department Details</h5>
+        <fieldset>
+            <input type="hidden" name="studentId" th:field="*{departmentId}"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Department Name</label>
+                        <input id="name" name="name" type="text" class="form-control"
+                               th:field="*{name}">
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="headOf">Head Of Department</label>
+                        <input id="headOf" name="headOf" type="text" class="form-control"
+                               th:field="*{headOf}">
+                        <span th:if="${#fields.hasErrors('headOf')}" th:errors="*{headOf}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="startDate">Department Start Date</label>
+                        <input id="startDate" name="startDate" type="date" class="form-control"
+                               th:field="*{startDate}">
+                        <span th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="studentCapacity">Student Capacity</label>
+                        <input id="studentCapacity" name="studentCapacity" type="number" class="form-control"
+                               th:field="*{studentCapacity}">
+                        <span th:if="${#fields.hasErrors('studentCapacity')}" th:errors="*{studentCapacity}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="details">Department Details</label>
+                        <textarea id="details" name="details" type="text" class="form-control"
+                                  th:field="*{details}" rows="4"></textarea>
+                        <span th:if="${#fields.hasErrors('details')}" th:errors="*{details}"
+                              class="alert alert-danger"></span>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </fieldset>
+
+
+        <div style="float:right;">
+            <a href="/eschoolos/dashboard/department/list" class="btn btn-outline-dark">Cancel</a>&nbsp;&nbsp;&nbsp;
+            <button id="btnSubmit" type="submit" class="btn btn-outline-success">
+                <span th:if="!${editable}">Save</span>
+                <span th:if="${editable}">Update</span>
+                Department
+            </button>
+        </div>
+
+    </form>
+
+
+</div>

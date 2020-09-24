@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="fragments/adminLayout" xmlns:layout="http://www.thymeleaf.org/"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div layout:fragment="content">
+    <nav th:replace="fragments/students/studentNavbar :: studentNavbar(title='Add Student', href='/eschoolos/dashboard/student/new', editable=false)"></nav>
+    <div th:replace="fragments/students/studentForm :: studentForm(action='/eschoolos/dashboard/student/new')"></div>
+</div>
+</body>
+</html>
