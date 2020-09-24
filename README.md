@@ -1,8 +1,9 @@
 # eSchoolos
 
-eSchoolos is an admin website that let you manage students, professors, staffs and other element information from your school.
+eSchoolos is an admin application website that let you manage students, professors, staffs and others data information from your school.
 
 This project was generated with [Spring Boot](https://spring.io/projects/spring-boot).
+
 
 Find more Templates [here](https://touwin10.com/templates/all)
 
